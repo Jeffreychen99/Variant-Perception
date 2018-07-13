@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00F1CDC020F8EBDE00403D6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F1CDBF20F8EBDE00403D6C /* AppDelegate.swift */; };
+		00F1CDC220F8EBDE00403D6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F1CDC120F8EBDE00403D6C /* ViewController.swift */; };
+		00F1CDC520F8EBDE00403D6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00F1CDC320F8EBDE00403D6C /* Main.storyboard */; };
+		00F1CDC720F8EBE000403D6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00F1CDC620F8EBE000403D6C /* Assets.xcassets */; };
+		00F1CDCA20F8EBE000403D6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00F1CDC820F8EBE000403D6C /* LaunchScreen.storyboard */; };
+		00F1CDD520F8EBE000403D6C /* Variant_PerceptionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F1CDD420F8EBE000403D6C /* Variant_PerceptionTests.swift */; };
+		00F1CDE020F8EBE000403D6C /* Variant_PerceptionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F1CDDF20F8EBE000403D6C /* Variant_PerceptionUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00F1CDD120F8EBE000403D6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00F1CDB420F8EBDE00403D6C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00F1CDBB20F8EBDE00403D6C;
+			remoteInfo = "Variant Perception";
+		};
+		00F1CDDC20F8EBE000403D6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00F1CDB420F8EBDE00403D6C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00F1CDBB20F8EBDE00403D6C;
+			remoteInfo = "Variant Perception";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00F1CDBC20F8EBDE00403D6C /* Variant Perception.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Variant Perception.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00F1CDBF20F8EBDE00403D6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		00F1CDC120F8EBDE00403D6C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		00F1CDC420F8EBDE00403D6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		00F1CDC620F8EBE000403D6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		00F1CDC920F8EBE000403D6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		00F1CDCB20F8EBE000403D6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00F1CDD020F8EBE000403D6C /* Variant PerceptionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Variant PerceptionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00F1CDD420F8EBE000403D6C /* Variant_PerceptionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variant_PerceptionTests.swift; sourceTree = "<group>"; };
+		00F1CDD620F8EBE000403D6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00F1CDDB20F8EBE000403D6C /* Variant PerceptionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Variant PerceptionUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00F1CDDF20F8EBE000403D6C /* Variant_PerceptionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variant_PerceptionUITests.swift; sourceTree = "<group>"; };
+		00F1CDE120F8EBE000403D6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00F1CDB920F8EBDE00403D6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00F1CDCD20F8EBE000403D6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00F1CDD820F8EBE000403D6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00F1CDB320F8EBDE00403D6C = {
+			isa = PBXGroup;
+			children = (
+				00F1CDBE20F8EBDE00403D6C /* Variant Perception */,
+				00F1CDD320F8EBE000403D6C /* Variant PerceptionTests */,
+				00F1CDDE20F8EBE000403D6C /* Variant PerceptionUITests */,
+				00F1CDBD20F8EBDE00403D6C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		00F1CDBD20F8EBDE00403D6C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00F1CDBC20F8EBDE00403D6C /* Variant Perception.app */,
+				00F1CDD020F8EBE000403D6C /* Variant PerceptionTests.xctest */,
+				00F1CDDB20F8EBE000403D6C /* Variant PerceptionUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00F1CDBE20F8EBDE00403D6C /* Variant Perception */ = {
+			isa = PBXGroup;
+			children = (
+				00F1CDBF20F8EBDE00403D6C /* AppDelegate.swift */,
+				00F1CDC120F8EBDE00403D6C /* ViewController.swift */,
+				00F1CDC320F8EBDE00403D6C /* Main.storyboard */,
+				00F1CDC620F8EBE000403D6C /* Assets.xcassets */,
+				00F1CDC820F8EBE000403D6C /* LaunchScreen.storyboard */,
+				00F1CDCB20F8EBE000403D6C /* Info.plist */,
+			);
+			path = "Variant Perception";
+			sourceTree = "<group>";
+		};
+		00F1CDD320F8EBE000403D6C /* Variant PerceptionTests */ = {
+			isa = PBXGroup;
+			children = (
+				00F1CDD420F8EBE000403D6C /* Variant_PerceptionTests.swift */,
+				00F1CDD620F8EBE000403D6C /* Info.plist */,
+			);
+			path = "Variant PerceptionTests";
+			sourceTree = "<group>";
+		};
+		00F1CDDE20F8EBE000403D6C /* Variant PerceptionUITests */ = {
+			isa = PBXGroup;
+			children = (
+				00F1CDDF20F8EBE000403D6C /* Variant_PerceptionUITests.swift */,
+				00F1CDE120F8EBE000403D6C /* Info.plist */,
+			);
+			path = "Variant PerceptionUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00F1CDBB20F8EBDE00403D6C /* Variant Perception */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00F1CDE420F8EBE000403D6C /* Build configuration list for PBXNativeTarget "Variant Perception" */;
+			buildPhases = (
+				00F1CDB820F8EBDE00403D6C /* Sources */,
+				00F1CDB920F8EBDE00403D6C /* Frameworks */,
+				00F1CDBA20F8EBDE00403D6C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Variant Perception";
+			productName = "Variant Perception";
+			productReference = 00F1CDBC20F8EBDE00403D6C /* Variant Perception.app */;
+			productType = "com.apple.product-type.application";
+		};
+		00F1CDCF20F8EBE000403D6C /* Variant PerceptionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00F1CDE720F8EBE000403D6C /* Build configuration list for PBXNativeTarget "Variant PerceptionTests" */;
+			buildPhases = (
+				00F1CDCC20F8EBE000403D6C /* Sources */,
+				00F1CDCD20F8EBE000403D6C /* Frameworks */,
+				00F1CDCE20F8EBE000403D6C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00F1CDD220F8EBE000403D6C /* PBXTargetDependency */,
+			);
+			name = "Variant PerceptionTests";
+			productName = "Variant PerceptionTests";
+			productReference = 00F1CDD020F8EBE000403D6C /* Variant PerceptionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		00F1CDDA20F8EBE000403D6C /* Variant PerceptionUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00F1CDEA20F8EBE000403D6C /* Build configuration list for PBXNativeTarget "Variant PerceptionUITests" */;
+			buildPhases = (
+				00F1CDD720F8EBE000403D6C /* Sources */,
+				00F1CDD820F8EBE000403D6C /* Frameworks */,
+				00F1CDD920F8EBE000403D6C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00F1CDDD20F8EBE000403D6C /* PBXTargetDependency */,
+			);
+			name = "Variant PerceptionUITests";
+			productName = "Variant PerceptionUITests";
+			productReference = 00F1CDDB20F8EBE000403D6C /* Variant PerceptionUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		00F1CDB420F8EBDE00403D6C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Jeffrey Chen";
+				TargetAttributes = {
+					00F1CDBB20F8EBDE00403D6C = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					00F1CDCF20F8EBE000403D6C = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 00F1CDBB20F8EBDE00403D6C;
+					};
+					00F1CDDA20F8EBE000403D6C = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 00F1CDBB20F8EBDE00403D6C;
+					};
+				};
+			};
+			buildConfigurationList = 00F1CDB720F8EBDE00403D6C /* Build configuration list for PBXProject "Variant Perception" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 00F1CDB320F8EBDE00403D6C;
+			productRefGroup = 00F1CDBD20F8EBDE00403D6C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				00F1CDBB20F8EBDE00403D6C /* Variant Perception */,
+				00F1CDCF20F8EBE000403D6C /* Variant PerceptionTests */,
+				00F1CDDA20F8EBE000403D6C /* Variant PerceptionUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00F1CDBA20F8EBDE00403D6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00F1CDCA20F8EBE000403D6C /* LaunchScreen.storyboard in Resources */,
+				00F1CDC720F8EBE000403D6C /* Assets.xcassets in Resources */,
+				00F1CDC520F8EBDE00403D6C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00F1CDCE20F8EBE000403D6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00F1CDD920F8EBE000403D6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00F1CDB820F8EBDE00403D6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00F1CDC220F8EBDE00403D6C /* ViewController.swift in Sources */,
+				00F1CDC020F8EBDE00403D6C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00F1CDCC20F8EBE000403D6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00F1CDD520F8EBE000403D6C /* Variant_PerceptionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00F1CDD720F8EBE000403D6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00F1CDE020F8EBE000403D6C /* Variant_PerceptionUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00F1CDD220F8EBE000403D6C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00F1CDBB20F8EBDE00403D6C /* Variant Perception */;
+			targetProxy = 00F1CDD120F8EBE000403D6C /* PBXContainerItemProxy */;
+		};
+		00F1CDDD20F8EBE000403D6C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00F1CDBB20F8EBDE00403D6C /* Variant Perception */;
+			targetProxy = 00F1CDDC20F8EBE000403D6C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		00F1CDC320F8EBDE00403D6C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				00F1CDC420F8EBDE00403D6C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		00F1CDC820F8EBE000403D6C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				00F1CDC920F8EBE000403D6C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		00F1CDE220F8EBE000403D6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		00F1CDE320F8EBE000403D6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		00F1CDE520F8EBE000403D6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YSTMU67JKA;
+				INFOPLIST_FILE = "Variant Perception/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Variant-Perception";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		00F1CDE620F8EBE000403D6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YSTMU67JKA;
+				INFOPLIST_FILE = "Variant Perception/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Variant-Perception";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		00F1CDE820F8EBE000403D6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YSTMU67JKA;
+				INFOPLIST_FILE = "Variant PerceptionTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Variant-PerceptionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Variant Perception.app/Variant Perception";
+			};
+			name = Debug;
+		};
+		00F1CDE920F8EBE000403D6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YSTMU67JKA;
+				INFOPLIST_FILE = "Variant PerceptionTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Variant-PerceptionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Variant Perception.app/Variant Perception";
+			};
+			name = Release;
+		};
+		00F1CDEB20F8EBE000403D6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YSTMU67JKA;
+				INFOPLIST_FILE = "Variant PerceptionUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Variant-PerceptionUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Variant Perception";
+			};
+			name = Debug;
+		};
+		00F1CDEC20F8EBE000403D6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YSTMU67JKA;
+				INFOPLIST_FILE = "Variant PerceptionUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Variant-PerceptionUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Variant Perception";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00F1CDB720F8EBDE00403D6C /* Build configuration list for PBXProject "Variant Perception" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00F1CDE220F8EBE000403D6C /* Debug */,
+				00F1CDE320F8EBE000403D6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00F1CDE420F8EBE000403D6C /* Build configuration list for PBXNativeTarget "Variant Perception" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00F1CDE520F8EBE000403D6C /* Debug */,
+				00F1CDE620F8EBE000403D6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00F1CDE720F8EBE000403D6C /* Build configuration list for PBXNativeTarget "Variant PerceptionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00F1CDE820F8EBE000403D6C /* Debug */,
+				00F1CDE920F8EBE000403D6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00F1CDEA20F8EBE000403D6C /* Build configuration list for PBXNativeTarget "Variant PerceptionUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00F1CDEB20F8EBE000403D6C /* Debug */,
+				00F1CDEC20F8EBE000403D6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00F1CDB420F8EBDE00403D6C /* Project object */;
+}
