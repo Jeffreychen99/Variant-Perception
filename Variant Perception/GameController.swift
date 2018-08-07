@@ -1,6 +1,6 @@
 //
 //  GameController.swift
-//  BIG
+//  Variant Perception
 //
 //  Created by Jeffrey Chen on 7/11/18.
 //  Copyright © 2018 Jeffrey Chen. All rights reserved.
@@ -20,7 +20,10 @@ class GameController: UIViewController {
     let holdButton = UIButton()
     let sellButton = UIButton()
     
-    let highScoreLabel = UILabel()
+    let buyAllButton = UIButton()
+    let sellAllButton = UIButton()
+    
+    let highScoreLabel = UIButton()
     let priceLabel = UILabel()
     let changeLabel = UILabel()
     let sharesLabel = UILabel()
@@ -32,6 +35,8 @@ class GameController: UIViewController {
     
     var currentHighScore = Double(0.00)
     
+    var trueValue = Double()
+    
     var currentScore = Double(0.00)
     var priceArr = [Double(drand48() * 110 + 15.0)]
     var sharesOwned = 0
@@ -40,6 +45,10 @@ class GameController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let time = UInt32(NSDate().timeIntervalSinceReferenceDate)
+        srand48(Int(time))
+        trueValue = Double(drand48() * 80) - 5
 
         let width = self.view.frame.width
         let height = self.view.frame.height
@@ -57,14 +66,14 @@ class GameController: UIViewController {
         backButton.addTarget(self, action: #selector(self.downsizeButton(_:)), for: .touchDown)
         backButton.addTarget(self, action: #selector(self.upsizeButton(_:)), for: .touchUpInside)
         backButton.addTarget(self, action: #selector(self.upsizeButton(_:)), for: .touchUpOutside)
-        self.view.addSubview(backButton)
+        //self.view.addSubview(backButton)
         
         highScoreLabel.frame = CGRect(x: width*0.05, y: height*0.075, width: width*0.9, height: height*0.075)
-        highScoreLabel.text = "Highscore:   $\(String(format: "%.2f", currentHighScore))"
+        highScoreLabel.setTitle("Highscore:   $\(String(format: "%.2f", currentHighScore))", for: .normal)
         highScoreLabel.backgroundColor = UIColor.black
-        highScoreLabel.textColor = UIColor.white
-        highScoreLabel.font =  UIFont(name: "EBGaramond08-Regular", size: 35)
-        highScoreLabel.textAlignment = .center
+        highScoreLabel.setTitleColor(UIColor.white, for: .normal)
+        setupButton(button: highScoreLabel)
+        highScoreLabel.titleLabel?.font =  UIFont(name: "EBGaramond08-Regular", size: 35)
         loadHighScore()
         self.view.addSubview(highScoreLabel)
         
@@ -91,13 +100,13 @@ class GameController: UIViewController {
         changeLabel.text = "(0.00%)"
         changeLabel.backgroundColor = UIColor.black
         changeLabel.textColor = UIColor.white
-        changeLabel.font =  UIFont(name: "EBGaramond08-Regular", size: 35)
+        changeLabel.font =  UIFont(name: "EBGaramond08-Regular", size: 33)
         changeLabel.textAlignment = .center
         changeLabel.layer.cornerRadius = 5
         changeLabel.clipsToBounds = true
         self.view.addSubview(changeLabel)
         
-        dayLabel.frame = CGRect(x: width*0.05, y: height*0.295, width: width*0.25, height: height*0.05)
+        dayLabel.frame = CGRect(x: width*0.05, y: height*0.295, width: width*0.2, height: height*0.05)
         dayLabel.text = "Day \(dayNum)"
         dayLabel.backgroundColor = UIColor.black
         dayLabel.textColor = UIColor.white
@@ -105,7 +114,7 @@ class GameController: UIViewController {
         dayLabel.textAlignment = .center
         self.view.addSubview(dayLabel)
         
-        cashLabel.frame = CGRect(x: width*0.3, y: height*0.295, width: width*0.4, height: height*0.05)
+        cashLabel.frame = CGRect(x: width*0.25, y: height*0.295, width: width*0.4, height: height*0.05)
         cashLabel.text = "Cash: $\(String(format: "%.2f", cashNum))"
         cashLabel.backgroundColor = UIColor.black
         cashLabel.textColor = UIColor.white
@@ -113,7 +122,7 @@ class GameController: UIViewController {
         cashLabel.textAlignment = .center
         self.view.addSubview(cashLabel)
         
-        sharesLabel.frame = CGRect(x: width*0.7, y: height*0.295, width: width*0.25, height: height*0.05)
+        sharesLabel.frame = CGRect(x: width*0.65, y: height*0.295, width: width*0.3, height: height*0.05)
         sharesLabel.text = "Shares:  \(sharesOwned)"
         sharesLabel.backgroundColor = UIColor.black
         sharesLabel.textColor = UIColor.white
@@ -121,7 +130,7 @@ class GameController: UIViewController {
         sharesLabel.textAlignment = .center
         self.view.addSubview(sharesLabel)
         
-        for _ in 0...30 {
+        for _ in 0...50 {
             advanceDay()
         }
         dayNum = 0
@@ -134,23 +143,30 @@ class GameController: UIViewController {
         self.view.addSubview(graph)
         firstAdvance = false
         
-        buyButton.frame = CGRect(x: width*0.1, y: height*0.63, width: width*0.8, height: height*0.075)
+        buyButton.frame = CGRect(x: width*0.1, y: height*0.63, width: width*0.39, height: height*0.075)
         buyButton.backgroundColor = green
         buyButton.setTitle("Buy 5 Shares",for: .normal)
         setupButton(button: buyButton)
         
-        sellButton.frame = CGRect(x: width*0.1, y: height*0.72, width: width*0.8, height: height*0.075)
+        buyAllButton.frame = CGRect(x: width*0.51, y: height*0.63, width: width*0.39, height: height*0.075)
+        buyAllButton.backgroundColor = green
+        buyAllButton.setTitle("All In",for: .normal)
+        setupButton(button: buyAllButton)
+        
+        sellButton.frame = CGRect(x: width*0.1, y: height*0.72, width: width*0.39, height: height*0.075)
         sellButton.backgroundColor = red
         sellButton.setTitle("Sell 5 Shares",for: .normal)
         setupButton(button: sellButton)
+        
+        sellAllButton.frame = CGRect(x: width*0.51, y: height*0.72, width: width*0.39, height: height*0.075)
+        sellAllButton.backgroundColor = red
+        sellAllButton.setTitle("Cash Out",for: .normal)
+        setupButton(button: sellAllButton)
         
         holdButton.frame = CGRect(x: width*0.1, y: height*0.81, width: width*0.8, height: height*0.075)
         holdButton.backgroundColor = UIColor.darkGray
         holdButton.setTitle("Next Day",for: .normal)
         setupButton(button: holdButton)
-        
-        let time = UInt32(NSDate().timeIntervalSinceReferenceDate)
-        srand48(Int(time))
         advanceDay()
     }
     
@@ -159,18 +175,22 @@ class GameController: UIViewController {
             return
         }
         var temp = [Double]()
-        for i in (priceArr.count - 16)...(priceArr.count - 1) {
+        for i in (priceArr.count - 31)...(priceArr.count - 1) {
             temp.append(priceArr[i])
         }
         let series = ChartSeries(temp)
-        series.colors = (above: ChartColors.greenColor(), below: ChartColors.redColor(), zeroLevel: priceArr[priceArr.count - 2])
+        if (priceArr.last! >= priceArr[priceArr.count - 2]) {
+            series.colors = (above: ChartColors.greenColor(), below: ChartColors.redColor(), zeroLevel: 0)
+        } else {
+            series.colors = (above: ChartColors.redColor(), below: ChartColors.redColor(), zeroLevel: 0)
+        }
         series.area = true
         graph.add(series)
     }
     
     func setupButton(button: UIButton) {
         button.setTitleColor(UIColor.white, for: .normal)
-        button.titleLabel?.font =  UIFont(name: "EBGaramond08-Regular", size: 30)
+        button.titleLabel?.font =  UIFont(name: "EBGaramond08-Regular", size: 25)
         button.layer.cornerRadius = 5
         button.clipsToBounds = true
         button.addTarget(self, action: #selector(self.buttonClicked(_:)), for: .touchUpInside)
@@ -188,31 +208,10 @@ class GameController: UIViewController {
         } else {
             currentHighScore = userHighScore as! Double
         }
-        highScoreLabel.text = "Highscore:   $\(String(format: "%.2f", currentHighScore))"
+        highScoreLabel.setTitle("Highscore:   $\(String(format: "%.2f", currentHighScore))", for: .normal)
     }
     
-    func quitGameAlert() {
-        let alert = UIAlertController(title: "Are you sure you want to quit?", message: "Your current game will be lost, but highscore will be saved", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))
-        alert.addAction(UIAlertAction(title: "Quit", style: .default, handler: { action in
-            switch action.style{
-                
-            case .default:
-                self.endGame()
-                let menu = ViewController(nibName: nil, bundle: nil)
-                self.present(menu, animated: true, completion: nil)
-            
-            case .cancel:
-                print("cancel")
-            
-            case .destructive:
-                print("destructive")
-            }
-        }))
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    func endGame() {
+    func checkHighScore() {
         let userDefaults = UserDefaults.standard
         let userHighScore = userDefaults.value(forKey: "highScore")
         if  userHighScore == nil {
@@ -224,17 +223,44 @@ class GameController: UIViewController {
         }
     }
     
+    func generatePctChange() -> Double {
+        if abs(trueValue - priceArr.last!) <= 0.75 {
+            print("DIFFFFF: \(trueValue - priceArr.last!)")
+            trueValue = Double(drand48() * 130) - 5
+        }
+        let trueDiffBool = (trueValue - priceArr.last!) / abs(trueValue - priceArr.last!)
+        print("diffBool: \(trueDiffBool)")
+        let towardsTrueValue = drand48() * 100
+        if towardsTrueValue >= 60 {
+            print("option1")
+            return drand48() * 0.04 - 0.02
+        } else if towardsTrueValue >= 7.5 {
+            print("option2")
+            return ((drand48() * 0.06) - 0.02) * trueDiffBool
+        } else if towardsTrueValue >= 2.5 {
+            print("option3")
+            return abs(drand48() * 0.175 + 0.1) * trueDiffBool
+        }
+        print("option4")
+        return abs(drand48() * 0.175 + 0.1) * trueDiffBool * -1
+    }
+    
     func advanceDay() {
+        print()
         dayNum += 1
         var pctChange = 0.0
         if priceArr.count < 2 {
             pctChange = drand48() * 0.2 - 0.1
-            //print(pctChange)
             priceArr.append(priceArr[0] * (1 + pctChange))
         } else {
-            pctChange = drand48() * 0.2 - 0.1
-            //print(pctChange)
-            priceArr.append(priceArr.last! * (1 + pctChange))
+            pctChange = generatePctChange()
+            print("Last: \(priceArr.last!)")
+            print("TRUEVALUE: \(trueValue)")
+            if priceArr.last! >= 3 {
+                priceArr.append(priceArr.last! * (1 + pctChange))
+            } else {
+                priceArr.append(priceArr.last! + (3 * (1 + pctChange)) )
+            }
         }
         
         if (pctChange >= 0.0) {
@@ -252,10 +278,10 @@ class GameController: UIViewController {
             return
         }
         print(currentScore)
-        print(currentHighScore)
         if currentScore > currentHighScore {
-            currentHighScore = currentScore + cashNum
-            highScoreLabel.text = "Highscore:   $\(String(format: "%.2f", currentHighScore))"
+            currentHighScore = currentScore
+            highScoreLabel.setTitle("Highscore:   $\(String(format: "%.2f", currentHighScore))", for: .normal)
+            checkHighScore()
         }
         graph.removeAllSeries()
         getCurrentChart()
@@ -263,10 +289,10 @@ class GameController: UIViewController {
     
     func raiseLoseAlert() {
         let alert = UIAlertController(title: "You Lose!", message: "Your variant perception was not variant enough", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Quit", style: UIAlertActionStyle.default, handler: { action in 
-            let menu = ViewController(nibName: nil, bundle: nil)
-            self.present(menu, animated: true, completion: nil)
-        }))
+        /**alert.addAction(UIAlertAction(title: "Quit", style: UIAlertActionStyle.default, handler: { action in 
+            //let menu = ViewController(nibName: nil, bundle: nil)
+            //self.present(menu, animated: true, completion: nil)
+        }))*/
         alert.addAction(UIAlertAction(title: "Play again", style: .default, handler: { action in
             switch action.style{
                 
@@ -284,9 +310,35 @@ class GameController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    func resetHighScoreAlert() {
+        let alert = UIAlertController(title: "Reset Highscore?", message: "This cannot be undone", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Reset", style: .default, handler: { action in
+            switch action.style{
+                
+            case .default:
+                let userDefaults = UserDefaults.standard
+                userDefaults.setValue(0.0, forKey: "highScore")
+                self.currentHighScore = 0.0
+                self.highScoreLabel.setTitle("Highscore:   $\(String(format: "%.2f", self.currentHighScore))", for: .normal)
+                let nextGame = GameController(nibName: nil, bundle: nil)
+                self.present(nextGame, animated: false, completion: nil)
+            
+            case .cancel:
+                print("cancel")
+            
+            case .destructive:
+                print("destructive")
+            }
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     @objc func buttonClicked(_ sender: AnyObject?) {
         if sender === backButton {
-            quitGameAlert()
+            //quitGameAlert()
+        } else if sender === highScoreLabel {
+            resetHighScoreAlert()
         } else if sender === buyButton {
             let gain = 5 * priceArr.last!
             if (gain <= cashNum) {
@@ -295,6 +347,12 @@ class GameController: UIViewController {
                 self.cashLabel.text = "Cash: $\(String(format: "%.2f", cashNum))"
                 self.sharesLabel.text = "Shares:  \(sharesOwned)"
             }
+        } else if sender === buyAllButton {
+            let sharesBought = Int((cashNum / priceArr.last!).rounded(.down))
+            sharesOwned += sharesBought
+            cashNum -= Double(sharesBought) * priceArr.last!
+            self.cashLabel.text = "Cash: $\(String(format: "%.2f", cashNum))"
+            self.sharesLabel.text = "Shares:  \(sharesOwned)"
         } else if sender === sellButton {
             let gain = 5 * priceArr.last!
             if (sharesOwned >= 5) {
@@ -303,8 +361,15 @@ class GameController: UIViewController {
                 self.cashLabel.text = "Cash: $\(String(format: "%.2f", cashNum))"
                 self.sharesLabel.text = "Shares:  \(sharesOwned)"
             }
+        } else if sender === sellAllButton {
+            cashNum += Double(sharesOwned) * priceArr.last!
+            sharesOwned = 0
+            self.cashLabel.text = "Cash: $\(String(format: "%.2f", cashNum))"
+            self.sharesLabel.text = "Shares:  \(sharesOwned)"
         } else if sender === holdButton {
             advanceDay()
+        } else if sender === highScoreLabel {
+            resetHighScoreAlert()
         }
     }  
     
@@ -318,6 +383,19 @@ class GameController: UIViewController {
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
+    }
+}
+
+extension Int {
+    private static var numberFormatter: NumberFormatter = {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+
+        return numberFormatter
+    }()
+
+    var delimiter: String {
+        return Int.numberFormatter.string(from: NSNumber(value: self)) ?? ""
     }
 }
 
